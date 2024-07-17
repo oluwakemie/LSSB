@@ -4,7 +4,6 @@ import Group from "./assets/Group.png";
 import comma from "./assets/comma.png";
 
 const SignUp = () => {
-const [isOpen, setIsOpen] = useState(false)
   return (
     <>
       <div className="flex flex-col md:flex-row w-full h-screen">
@@ -18,59 +17,37 @@ const [isOpen, setIsOpen] = useState(false)
           </div>
         </div>
 
-        <div className="flex flex-col :flex-row w-full h-screen  items-center">
-          <div className="mx-auto w-full max-w-[65%] p-6 md:p-20 ">
+        <div className="flex flex-col md:flex-row w-full h-screen items-center">
+          <div className="mx-auto w-full max-w-[85%] p-6 md:p-20">
             <form>
               <h2 className="text-[32px] text-[#202430] flex items-center justify-center">
                 Sign Up
               </h2>
-              <div>
-                <label className="text-[16px] text-[#515B6F] font-semibold">
-                  Enter ID TYPE
-                </label>
-                <div className="py-2">
-                  {" "}
-                  <button onClick={() => setIsOpen}
-                    type="button"
-                    className="border w-full text-center outline-[#CCCCF5] py-2 px-3 mt-4 text-[16px] font-semibold flex justify-between items-center"
-                  >
-                    Select ID Type
-                    <svg
-                      width="18"
-                      height="10"
-                      viewBox="0 0 18 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M16.4977 0.988801L9.00072 8.2968L1.50372 0.988801C1.36978 0.857957 1.18997 0.784703 1.00272 0.784703C0.81548 0.784703 0.635666 0.857957 0.501725 0.988801C0.436868 1.05235 0.385343 1.1282 0.350168 1.21191C0.314993 1.29561 0.296875 1.3855 0.296875 1.4763C0.296875 1.5671 0.314993 1.65699 0.350168 1.7407C0.385343 1.82441 0.436868 1.90025 0.501725 1.9638L8.47722 9.7398C8.61729 9.87632 8.80514 9.95273 9.00072 9.95273C9.19631 9.95273 9.38416 9.87632 9.52423 9.7398L17.4997 1.9653C17.565 1.90171 17.617 1.82567 17.6524 1.74169C17.6878 1.6577 17.7061 1.56746 17.7061 1.4763C17.7061 1.38514 17.6878 1.2949 17.6524 1.21092C17.617 1.12693 17.565 1.05089 17.4997 0.987301C17.3658 0.856456 17.186 0.783203 16.9987 0.783203C16.8115 0.783203 16.6317 0.856456 16.4977 0.987301V0.988801Z"
-                        fill="#A8ADB7"
-                      />
-                    </svg>
-                  </button>
-                </div>
-
-                {/* <input
-                  type="text"
-                  name="name"
-                  placeholder=""
-                  className="appearance-none relative block w-full px-3 py-2 mt-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md"
-                /> */}
-              </div>
-              <div className="my-3">
+                <div className="py-3 w-full  ">
                 <label className="text-[16px]   text-[#515B6F] font-semibold">
+                Enter ID TYPE
+                </label>
+                  <select name="" id="" className="w-full py-2 pl-4 pr-4 text-[#A0AEC0] leading-[21px] tracking-[0.2px] text-[16px] border border-[#E2E8F0] rounded-md  focus:border-gray-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300">
+                    <option value="">Select ID Type</option>
+                    <option value={"Success"}>NIN</option>
+                    <option value={"Failed"}>LASSRA</option>
+                  </select>
+                </div>
+              
+              <div className="mt-3">
+                <label className="text-[16px] text-[#515B6F] font-semibold">
                   Enter LASSRA/NIN
                 </label>
                 <input
                   type="text"
                   name="name"
                   placeholder="Enter Email Address"
-                  className="appearance-none relative mt-2 block w-full px-3 py-2 border border-gray-300 placeholder-[#A8ADB7]  text-gray-900 rounded-md"
+                  className="appearance-none relative mt-2 block w-full px-3 py-2 placeholder-[#A8ADB7]  leading-[21px] tracking-[0.2px] text-[16px] border border-[#E2E8F0] rounded-md  focus:border-gray-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300 text-gray-900 rounded-md"
                 />
               </div>
               <button
                 type="button"
-                className="border w-full text-center bg-[#AF8544] outline-none text-[#fff] font-semibold text-[16px] py-2"
+                className="border mt-3 w-full text-center bg-[#AF8544] outline-none text-[#fff] font-semibold text-[16px] py-2"
               >
                 Continue{" "}
               </button>
@@ -92,7 +69,7 @@ const [isOpen, setIsOpen] = useState(false)
                 accept the{" "}
                 <span className="text-[#AF8544] ">
                   Terms of Service and Privacy Policy
-                </span>{" "}
+                </span>
               </p>
             </div>
           </div>
